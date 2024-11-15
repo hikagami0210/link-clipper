@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "リンクテキストとしてコピー",
+    "version": "1.0",
+    "description": "選択したテキストをリンク形式でコピーする拡張機能",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "clipboardWrite",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
