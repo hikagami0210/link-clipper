@@ -24,12 +24,10 @@ function copyToClipboard(selectedText, pageUrl) {
   const formattedText = `[${selectedText}](${pageUrl})`;
 
   // クリップボードに書き込む
-  navigator.clipboard
-    .writeText(formattedText)
-    .then(() => {
-      console.log("リンクテキストがクリップボードにコピーされました");
-    })
-    .catch((err) => {
-      console.error("クリップボードにコピーできませんでした: ", err);
-    });
+  navigator.clipboard.writeText(formattedText).catch((err) => {
+    console.error(
+      "link-clipper: 何らかのエラーによりクリップボードにコピーできませんでした",
+      err
+    );
+  });
 }
